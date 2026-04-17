@@ -78,7 +78,7 @@ h1 {
 <body>
 
 <header>
-<img src="logo.png">
+<img src="logo.png.jpg">
 <h1>دواجن ومشويات درغام</h1>
 <p>🔥 انت في أمان 🔥</p>
 </header>
@@ -110,7 +110,7 @@ function show(cat){
   data.filter(x => x["القسم"] == cat).forEach(item => {
     html += `
     <div class="card">
-      <img src="${item["الصورة"] || 'https://via.placeholder.com/300'}">
+      <img src="https://images.weserv.nl/?url=${item["الصورة"]}">
       <div class="card-content">
         <div>${item["اسم"]}</div>
         <div class="price">${item["السعر"]} جنيه</div>
