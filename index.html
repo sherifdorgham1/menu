@@ -19,7 +19,7 @@ header {
 }
 
 header img {
-  width:140px;
+  width:120px;
 }
 
 h1 {
@@ -53,15 +53,14 @@ h1 {
 
 .card {
   background:#1a1a1a;
-  border-radius:15px;
-  overflow:hidden;
   margin-bottom:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.6);
+  border-radius:10px;
+  overflow:hidden;
 }
 
 .card img {
   width:100%;
-  height:160px;
+  height:180px;
   object-fit:cover;
 }
 
@@ -73,23 +72,13 @@ h1 {
   color:#ffcc00;
   font-weight:bold;
 }
-
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50%;
-  font-size:22px;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="https://i.imgur.com/4ZQZ4ZP.png">
+<img src="logo.png">
 <h1>دواجن ومشويات درغام</h1>
 <p>🔥 انت في أمان 🔥</p>
 </header>
@@ -102,9 +91,8 @@ h1 {
 
 <div id="content" class="section"></div>
 
-<a class="whatsapp" href="https://wa.me/201211340121">📞</a>
-
 <script>
+
 const sheetURL = "https://opensheet.elk.sh/1k6NxRHJYTSZtmAqkB-P6Qrpylnh5crkaIGkqGjtCoTA/1";
 
 let data = [];
@@ -118,10 +106,11 @@ fetch(sheetURL)
 
 function show(cat){
   let html = "";
+
   data.filter(x => x["القسم"] == cat).forEach(item => {
     html += `
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?chicken,food">
+      <img src="${item["الصورة"] || 'https://via.placeholder.com/300'}">
       <div class="card-content">
         <div>${item["اسم"]}</div>
         <div class="price">${item["السعر"]} جنيه</div>
@@ -129,8 +118,10 @@ function show(cat){
     </div>
     `;
   });
+
   document.getElementById("content").innerHTML = html;
 }
+
 </script>
 
 </body>
