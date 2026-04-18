@@ -204,8 +204,8 @@ h1 {
 .ticker span {
   display:inline-block;
   padding-left:100%;
-  font-size:22px;       /* كبرنا الخط */
-  font-weight:900;      /* تقيل جدًا */
+  font-size:24px;       /* كبرنا الخط */
+  font-weight:1000;      /* تقيل جدًا */
   color:#ff9800;
   letter-spacing:1px;
 
