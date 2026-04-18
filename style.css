@@ -145,23 +145,15 @@ h1 {
   margin-bottom:10px;
 }
 
-/* مكان البروفايل */
-.profile-box {
-  display:flex;
-  justify-content:center;
-  margin-top:-15px;
-  margin-bottom:15px;
+/* البانر تحت اللوجو */
+.banner {
+  width:100%;
+  margin:10px 0 15px 0;
 }
 
-/* صورة البروفايل */
-.profile-box img {
-  width:60px;
-  height:60px;
-  border-radius:50%;
+.banner img {
+  width:100%;
+  height:130px;
   object-fit:cover;
-
-  border:3px solid #0d0d0d;
-  outline:3px solid #2196f3;
-
-  box-shadow:0 4px 12px rgba(0,0,0,0.6);
+  border-radius:12px;
 }
