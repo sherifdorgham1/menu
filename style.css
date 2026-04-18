@@ -125,7 +125,7 @@ h1 {
 }
 
 /* ================== */
-/* البانر الجديد */
+/* البانر الاحترافي */
 /* ================== */
 
 .banner {
@@ -140,7 +140,39 @@ h1 {
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius:0; /* يشيل أي بيضاوي */
+}
+
+/* طبقة غمقان */
+.banner::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+/* النص فوق البانر */
+.banner-text {
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:2;
+  text-align:left;
+}
+
+.banner-text h2 {
+  margin:0;
+  font-size:18px;
+  color:#ff9800;
+  font-weight:bold;
+}
+
+.banner-text span {
+  font-size:14px;
+  color:#fff;
 }
 
 /* اللوجو على اليمين */
@@ -149,6 +181,7 @@ h1 {
   top:50%;
   right:15px;
   transform:translateY(-50%);
+  z-index:2;
 }
 
 .logo-right img {
