@@ -200,23 +200,37 @@ h1 {
   margin-top:10px;
 }
 
-/* السطر المتحرك - كبير وعريض */
+/* الشريط */
+.ticker {
+  width:100%;
+  overflow:hidden;
+  background:#111;
+  border-top:2px solid #ff9800;
+  border-bottom:2px solid #ff9800;
+  padding:8px 0;
+  direction:rtl; /* مهم للعربي */
+}
+
+/* النص */
 .ticker span {
   display:inline-block;
-  padding-left:100%;
-  font-size:24px;       /* كبرنا الخط */
-  font-weight:1000;      /* تقيل جدًا */
+  white-space:nowrap;
+
+  font-size:22px;
+  font-weight:900;
   color:#ff9800;
   letter-spacing:1px;
+  text-shadow:0 0 8px rgba(255,152,0,0.8);
 
-  text-shadow: 0 0 8px rgba(255,152,0,0.8); /* لمعة */
-
-  animation:scroll 8s linear infinite; /* أسرع شوية */
+  /* يبدأ من اليمين ويروح لليسار */
+  transform:translateX(100%);
+  animation:news-scroll 10s linear infinite;
 }
+
 /* الحركة */
-@keyframes scroll {
+@keyframes news-scroll {
   0% {
-    transform:translateX(0);
+    transform:translateX(100%);
   }
   100% {
     transform:translateX(-100%);
