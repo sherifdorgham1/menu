@@ -10,11 +10,23 @@ fetch(sheetURL)
 });
 
 function show(cat){
+
+  // إزالة التحديد من الكل
+  document.querySelectorAll(".tabs button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  // تحديد الزر الحالي
+  document.querySelectorAll(".tabs button").forEach(btn => {
+    if(btn.innerText.includes(cat)){
+      btn.classList.add("active");
+    }
+  });
+
   let html = "";
 
   data.filter(x => x["القسم"] == cat).forEach(item => {
 
-    // fallback لو الصورة فاضية أو بايظة
     let img = item["الصورة"] ? 
     `https://images.weserv.nl/?url=${item["الصورة"]}` :
     "https://via.placeholder.com/300";
