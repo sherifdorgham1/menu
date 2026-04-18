@@ -65,27 +65,29 @@ h1 {
   width:100%;
   height:140px;
   object-fit:cover;
+  object-position:center;
   background:#000;
 }
 
-/* المحتوى */
+/* المحتوى (الخلفية الأورنج) */
 .card-content {
-  padding:10px;
+  padding:12px;
   text-align:center;
+  background:#ff9800;
 }
 
-/* الاسم */
+/* اسم الصنف */
 .name {
-  font-size:17px;
+  font-size:18px;
   font-weight:700;
-  color:#ff9800;
+  color:#1a1a1a; /* غامق */
   margin-bottom:6px;
 }
 
 /* السعر */
 .price {
   font-size:16px;
-  color:#ff9800;
+  color:#ffffff; /* أبيض */
   font-weight:700;
 }
 
