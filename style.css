@@ -1,1 +1,90 @@
 
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0d0d0d;
+  color:white;
+}
+
+/* الهيدر */
+header {
+  text-align:center;
+  padding:15px;
+}
+
+header img {
+  width:90px;
+  border-radius:50%;
+}
+
+h1 {
+  color:#ffc107;
+  margin:5px;
+}
+
+/* التابات */
+.tabs {
+  display:flex;
+  overflow:auto;
+  background:#111;
+  position:sticky;
+  top:0;
+}
+
+.tabs button {
+  flex:1;
+  padding:12px;
+  border:none;
+  background:none;
+  color:white;
+  font-size:14px;
+}
+
+.tabs button:hover {
+  background:#e53935;
+}
+
+/* الكروت */
+.container {
+  padding:10px;
+}
+
+.card {
+  display:flex;
+  align-items:center;
+  background:#1a1a1a;
+  border-radius:15px;
+  margin-bottom:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width:90px;
+  height:90px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:10px;
+  flex:1;
+}
+
+.name {
+  font-size:15px;
+  margin-bottom:5px;
+}
+
+.price {
+  color:#ffc107;
+  font-weight:bold;
+}
+
+/* الفوتر */
+.footer {
+  background:#111;
+  padding:15px;
+  text-align:center;
+  margin-top:20px;
+  font-size:14px;
+}
