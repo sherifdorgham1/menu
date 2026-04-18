@@ -95,8 +95,8 @@ h1 {
 .card-content {
   padding:12px;
   text-align:center;
-  background:#1f1f1f;
-  border-top:1px solid #333;
+  background:#3a3a3a; /* رصاصي واضح */
+  border-top:1px solid #555;
 }
 
 /* الاسم */
