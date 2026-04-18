@@ -16,12 +16,12 @@ header img {
   height:110px;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid #2196f3;
+  border:3px solid #ff9800; /* زي القديم */
   margin-bottom:10px;
 }
 
 h1 {
-  color:#2196f3;
+  color:#ff9800; /* زي القديم */
   margin:5px 0;
   font-size:22px;
   font-weight:bold;
@@ -37,13 +37,13 @@ h1 {
   top:0;
 }
 
-/* الأزرار */
+/* الأزرار - تم التعديل هنا فقط */
 .tabs button {
   flex:1;
   padding:12px;
   border:none;
   border-radius:12px;
-  background:linear-gradient(135deg, #2196f3, #0d47a1);
+  background:linear-gradient(135deg, #2196f3, #0d47a1); /* أزرق */
   color:white;
   font-size:15px;
   font-weight:bold;
@@ -52,16 +52,17 @@ h1 {
   transition:0.3s;
 }
 
-/* hover */
+/* عند المرور */
 .tabs button:hover {
   transform:translateY(-2px);
   box-shadow:0 6px 14px rgba(0,0,0,0.5);
 }
 
-/* الزرار المختار */
+/* الزر المختار - أورنج زي ما كان */
 .tabs button.active {
-  background:linear-gradient(135deg, #00c6ff, #0072ff);
-  box-shadow:0 0 15px rgba(0,114,255,0.8);
+  background:#ff9800;
+  color:#000;
+  box-shadow:0 0 12px rgba(255,152,0,0.8);
   transform:scale(1.05);
 }
 
@@ -86,21 +87,22 @@ h1 {
   width:100%;
   height:140px;
   object-fit:cover;
+  object-position:center;
   background:#000;
 }
 
-/* المحتوى */
+/* المحتوى (فضلناه أورنج زي القديم) */
 .card-content {
   padding:12px;
   text-align:center;
-  background:#2196f3;
+  background:#ff9800;
 }
 
-/* الاسم */
+/* اسم الصنف */
 .name {
   font-size:18px;
   font-weight:700;
-  color:#0d0d0d;
+  color:#1a1a1a;
   margin-bottom:6px;
 }
 
