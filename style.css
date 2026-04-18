@@ -35,13 +35,31 @@ h1 {
   top:0;
 }
 
+.tabs {
+  display:flex;
+  gap:10px;
+  padding:10px;
+  background:#111;
+  position:sticky;
+  top:0;
+}
+
 .tabs button {
   flex:1;
-  padding:12px;
+  padding:10px;
   border:none;
-  background:none;
+  border-radius:10px;
+  background:#1a1a1a;
   color:white;
-  font-size:15px;
+  font-size:14px;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+/* عند المرور */
+.tabs button:hover {
+  background:#ff9800;
+  color:#000;
 }
 
 /* الجريد */
