@@ -240,12 +240,11 @@ h1 {
   animation:moveNews 12s linear infinite;
 }
 
-/* الحركة من يمين لليسار */
 @keyframes moveNews {
   0% {
-    right:-100%;
+    transform:translateX(100%);
   }
   100% {
-    right:100%;
+    transform:translateX(-100%);
   }
 }
