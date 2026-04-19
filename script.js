@@ -36,10 +36,10 @@ function show(cat){
       <img src="${img}">
       <div class="card-content">
         <div class="name">${item["اسم"]}</div>
-        <div class="price">${item["السعر"]} جنيه الكيلو</div>
+        <div class="price">${item["السعر"]} جنيه ${item["الوحدة"]}</div>
 
         <a href="https://wa.me/201211340121?text=${encodeURIComponent(
-          "السلام عليكم، عايز أطلب " + item["اسم"] + " بسعر " + item["السعر"] + " جنيه الكيلو"
+          "السلام عليكم، عايز أطلب " + item["اسم"] + " بسعر " + item["السعر"] + " جنيه " + item["الوحدة"]
         )}" target="_blank" class="order-item-btn">
           اطلب ده
         </a>
