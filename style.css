@@ -136,22 +136,41 @@ header p {
   margin-bottom:6px;
 }
 
+/* السعر كله */
 .price {
   direction: rtl;
   unicode-bidi: isolate;
 
-  font-size:18px;
-  font-weight:700;
+  font-size:16px;
+  font-weight:600;
   color:#ff9800;
 }
 
-/* الرقم يتظبط لوحده */
+/* الرقم نفسه 🔥 */
 .price .num {
-  direction: ltr;
+  direction:ltr;
   display:inline-block;
-  font-weight:bold;
+
+  font-size:26px;        /* 👈 كبير */
+  font-weight:900;
+  color:#00e5ff;         /* 👈 لون لافت (سماوي) */
+
+  /* لمعة */
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 20px #00e5ff;
+
+  /* حركة ظهور واختفاء */
+  animation:priceGlow 2s infinite;
 }
 
+/* الأنيميشن */
+@keyframes priceGlow {
+  0%   { opacity:1; transform:scale(1); }
+  50%  { opacity:0.6; transform:scale(1.05); }
+  100% { opacity:1; transform:scale(1); }
+}
 /* الفوتر */
 .footer {
   background:#111;
