@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+
+<!-- ✅ Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RCZG7M562P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RCZG7M562P');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دواجن ومشويات درغام</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -23,11 +35,16 @@
 
   <h1>مع دواجن ومشويات درغام</h1>
   <p>🔥 انت في أمان 🔥</p>
+
+  <!-- التاريخ -->
   <div class="date-box" id="dateBox"></div>
-<div class="delivery-text">
-  <span class="delivery-icon">🛵</span>
-  خدمة التوصيل علي مستوي العجمي
-</div>
+
+  <!-- التوصيل -->
+  <div class="delivery-text">
+    <span class="delivery-icon">🛵</span>
+    خدمة التوصيل علي مستوي العجمي
+  </div>
+
   <!-- شريط الأخبار -->
   <div class="ticker">
     <div class="ticker-label">عاجل</div>
@@ -38,23 +55,27 @@
 
 </header>
 
+<!-- الأقسام -->
 <div class="tabs">
   <button onclick="show('طيور')" class="active">🐔 طيور</button>
   <button onclick="show('مقطع')">🔪 مقطع</button>
   <button onclick="show('مشويات')">🔥 مشويات</button>
 </div>
 
+<!-- المنتجات -->
 <div id="content" class="container"></div>
 
+<!-- الفوتر -->
 <div class="footer">
   📍 العنوان: ابويوسف شارع الروضة الخضراء قبل قرية الروضه  
   <br>
   📞 واتساب: 01211340121
 </div>
 
+<!-- السكريبت -->
 <script src="script.js"></script>
 
-<!-- ✅ الأزرار الثابتة تحت (المكان الصح) -->
+<!-- ✅ الأزرار الثابتة -->
 <div class="fixed-buttons">
 
   <a href="tel:01211340121" class="call-btn">
