@@ -170,7 +170,7 @@ h1 {
 .logo-right {
   position:absolute;
   top:30%;
-  right:15px;
+  right:5px;
   transform:translateY(-50%);
   z-index:2;
 }
