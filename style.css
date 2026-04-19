@@ -227,16 +227,16 @@ h1 {
   overflow:hidden;
 }
 
-/* النص */
 .ticker-move span {
-  position:absolute;
+  display:inline-block;
   white-space:nowrap;
 
   font-size:20px;
   font-weight:900;
   color:#ff9800;
-  padding-right:100%;
 
+  /* يبدأ من اليمين */
+  transform:translateX(100%);
   animation:moveNews 12s linear infinite;
 }
 
