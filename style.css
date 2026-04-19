@@ -258,3 +258,10 @@ h1 {
 .order-item-btn:hover {
   background:#1ebe5d;
 }
+/* نص خدمة التوصيل */
+.delivery-text {
+  margin-top:5px;
+  font-size:18px;
+  color:#ff9800;
+  font-weight:bold;
+}
