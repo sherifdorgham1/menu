@@ -136,11 +136,20 @@ header p {
   margin-bottom:6px;
 }
 
-/* السعر */
 .price {
-  font-size:16px;
-  color:#ff9800;
+  direction: rtl;
+  unicode-bidi: isolate;
+
+  font-size:18px;
   font-weight:700;
+  color:#ff9800;
+}
+
+/* الرقم يتظبط لوحده */
+.price .num {
+  direction: ltr;
+  display:inline-block;
+  font-weight:bold;
 }
 
 /* الفوتر */
