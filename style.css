@@ -359,3 +359,10 @@ header p {
   0% { background-position:200% 0; }
   100% { background-position:-200% 0; }
 }
+
+.date-box {
+  margin-top:5px;
+  font-size:14px;
+  color:#aaa;
+  text-align:center;
+}
