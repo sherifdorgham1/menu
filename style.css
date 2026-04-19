@@ -239,3 +239,22 @@ h1 {
     transform:translateX(100%); /* يروح لليمين */
   }
 }
+
+/* زرار اطلب ده */
+.order-item-btn {
+  display:block;
+  margin-top:10px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  padding:8px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+/* تأثير */
+.order-item-btn:hover {
+  background:#1ebe5d;
+}
