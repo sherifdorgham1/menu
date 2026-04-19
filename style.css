@@ -169,7 +169,7 @@ h1 {
 /* اللوجو على اليمين */
 .logo-right {
   position:absolute;
-  top:50%;
+  top:30%;
   right:15px;
   transform:translateY(-50%);
   z-index:2;
