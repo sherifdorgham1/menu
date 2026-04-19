@@ -27,7 +27,12 @@ function show(cat){
 
   data.filter(x => x["القسم"] == cat).forEach(item => {
 
-let img = item["الصورة"] ? item["الصورة"] : "https://via.placeholder.com/300?text=No+Image";
+<div class="img-box">
+  <div class="img-loader"></div>
+  <img src="${img}" 
+       onload="this.previousElementSibling.style.display='none'" 
+       onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.previousElementSibling.style.display='none'">
+</div>
 
     html += `
     <div class="card">
