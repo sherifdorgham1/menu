@@ -143,33 +143,30 @@ header p {
 
   font-size:16px;
   font-weight:600;
-  color:#ff9800;
+  color:#cccccc; /* رصاصي هادي */
 }
 
-/* الرقم نفسه 🔥 */
+/* الرقم */
 .price .num {
   direction:ltr;
   display:inline-block;
 
-  font-size:26px;        /* 👈 كبير */
+  font-size:24px;   /* أكبر */
   font-weight:900;
-  color:#00e5ff;         /* 👈 لون لافت (سماوي) */
+  color:#ff9800;    /* أورنج الأساسي */
 
-  /* لمعة */
-  text-shadow:
-    0 0 5px #00e5ff,
-    0 0 10px #00e5ff,
-    0 0 20px #00e5ff;
+  /* لمعة خفيفة جدًا */
+  text-shadow:0 0 3px rgba(255,152,0,0.3);
 
-  /* حركة ظهور واختفاء */
-  animation:priceGlow 2s infinite;
+  /* حركة هادية */
+  animation:pricePulse 2.5s ease-in-out infinite;
 }
 
-/* الأنيميشن */
-@keyframes priceGlow {
-  0%   { opacity:1; transform:scale(1); }
-  50%  { opacity:0.6; transform:scale(1.05); }
-  100% { opacity:1; transform:scale(1); }
+/* حركة بسيطة جدًا */
+@keyframes pricePulse {
+  0%   { transform:scale(1); opacity:1; }
+  50%  { transform:scale(1.03); opacity:0.85; }
+  100% { transform:scale(1); opacity:1; }
 }
 /* الفوتر */
 .footer {
