@@ -237,25 +237,31 @@ header p {
   overflow:hidden;
 }
 
-.ticker-move span {
-  display:inline-block;
-  white-space:nowrap;
+.ticker-move {
+  overflow:hidden;
+  width:100%;
+}
 
+.ticker-track {
+  display:flex;
+  width:max-content;
+  animation:scrollNews 25s linear infinite;
+}
+
+.ticker-track span {
+  white-space:nowrap;
   font-size:20px;
   font-weight:900;
   color:#ff9800;
-
-  padding-left:50px; /* مسافة بسيطة بين النسخ */
-
-  animation:moveNews 25s linear infinite;
+  padding-left:30px;
 }
 
-@keyframes moveNews {
+@keyframes scrollNews {
   0% {
-    transform:translateX(-100%);
+    transform:translateX(-50%);
   }
   100% {
-    transform:translateX(100%);
+    transform:translateX(0%);
   }
 }
 
