@@ -39,7 +39,7 @@ function show(cat){
         <div class="price">${item["السعر"]} جنيه الكيلو</div>
 
         <a href="https://wa.me/201211340121?text=${encodeURIComponent(
-          "السلام عليكم، عايز أطلب " + item["اسم"] + " بسعر " + item["السعر"] + " جنيه"
+          "السلام عليكم، عايز أطلب " + item["اسم"] + " بسعر " + item["السعر"] + " جنيه الكيلو"
         )}" target="_blank" class="order-item-btn">
           اطلب ده
         </a>
