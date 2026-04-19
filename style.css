@@ -31,12 +31,30 @@ header p {
   text-shadow: 0 0 8px rgba(255,152,0,0.6);
 }
 
-/* نص خدمة التوصيل */
 .delivery-text {
   margin-top:2px;
   font-size:18px;
-  color:#ff9800;
+  color:#00e676; /* أخضر مميز */
   font-weight:bold;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  animation:blinkDelivery 1.5s infinite;
+}
+
+/* أيقونة الفيسبا */
+.delivery-icon {
+  font-size:20px;
+}
+
+/* حركة ظهور واختفاء */
+@keyframes blinkDelivery {
+  0% { opacity:1; }
+  50% { opacity:0.3; }
+  100% { opacity:1; }
 }
 
 /* التابات */
