@@ -356,10 +356,13 @@ header p {
   animation:loading 1.2s infinite;
 }
 
-/* حركة اللودينج */
-@keyframes loading {
-  0% { background-position:200% 0; }
-  100% { background-position:-200% 0; }
+@keyframes moveNews {
+  0% {
+    transform:translateX(100%);
+  }
+  100% {
+    transform:translateX(-100%);
+  }
 }
 
 .date-box {
