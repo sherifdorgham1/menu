@@ -40,9 +40,9 @@ function show(cat){
       <!-- صورة + لودينج -->
       <div class="img-box">
         <div class="img-loader"></div>
-        <img src="${img}" 
-             onload="this.style.opacity=1; this.previousElementSibling.style.display='none'" 
-             onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.style.opacity=1; this.previousElementSibling.style.display='none'">
+       <img src="${img}" 
+     onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none'" 
+     onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none'">
       </div>
 
       <div class="card-content">
