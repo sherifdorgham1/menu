@@ -9,14 +9,23 @@ fetch(sheetURL)
   show("طيور");
 });
 
+// ✅ التاريخ (برا خالص)
+let today = new Date();
+
+let day = today.getDate();
+let month = today.getMonth() + 1;
+let year = today.getFullYear();
+
+document.getElementById("dateBox").innerText =
+  "📅 آخر تحديث: " + day + " / " + month + " / " + year;
+
+
 function show(cat){
 
-  // إزالة التحديد من الأزرار
   document.querySelectorAll(".tabs button").forEach(btn => {
     btn.classList.remove("active");
   });
 
-  // تحديد الزر الحالي
   document.querySelectorAll(".tabs button").forEach(btn => {
     if(btn.innerText.includes(cat)){
       btn.classList.add("active");
@@ -29,44 +38,30 @@ function show(cat){
   .filter(x => x["القسم"] == cat)
   .forEach(item => {
 
-    // صورة المنتج
     let img = item["الصورة"] 
       ? item["الصورة"] 
       : "https://via.placeholder.com/300?text=No+Image";
 
     html += `
     <div class="card">
-         // تاريخ اليوم
-    let today = new Date();
-    
-    let day = today.getDate();
-    let month = today.getMonth() + 1;
-    let year = today.getFullYear();
-    
-    // عرض التاريخ
-    document.getElementById("dateBox").innerText =
-      "📅 آخر تحديث: " + day + " / " + month + " / " + year; 
-      <!-- صورة + لودينج -->
+
       <div class="img-box">
         <div class="img-loader"></div>
-       <img src="${img}" 
-     onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none'" 
-     onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none'">
+        <img src="${img}" 
+             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none'" 
+             onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none'">
       </div>
 
       <div class="card-content">
         
-        <!-- اسم المنتج -->
         <div class="name">${item["اسم"]}</div>
 
-        <!-- السعر -->
         <div class="price">
           <span class="num">${item["السعر"]}</span>
           جنيه
           ${item["الوحدة"] || "الكيلو"}
         </div>
 
-        <!-- زر الطلب -->
         <a href="https://wa.me/201211340121?text=${encodeURIComponent(
           "السلام عليكم، عايز أطلب " + item["اسم"] + " بسعر " + item["السعر"] + " جنيه " + (item["الوحدة"] || "الكيلو")
         )}" 
