@@ -11,7 +11,7 @@ fetch(sheetURL)
 
 function show(cat){
 
-  // إزالة التحديد من الكل
+  // إزالة التحديد من الأزرار
   document.querySelectorAll(".tabs button").forEach(btn => {
     btn.classList.remove("active");
   });
@@ -25,27 +25,39 @@ function show(cat){
 
   let html = "";
 
-  data.filter(x => x["القسم"] == cat).forEach(item => {
+  data
+  .filter(x => x["القسم"] == cat)
+  .forEach(item => {
 
-<div class="img-box">
-  <div class="img-loader"></div>
-  <img src="${img}" 
-       onload="this.previousElementSibling.style.display='none'" 
-       onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.previousElementSibling.style.display='none'">
-</div>
+    // صورة المنتج
+    let img = item["الصورة"] 
+      ? item["الصورة"] 
+      : "https://via.placeholder.com/300?text=No+Image";
 
     html += `
     <div class="card">
-      <img src="${img}">
+
+      <!-- صورة + لودينج -->
+      <div class="img-box">
+        <div class="img-loader"></div>
+        <img src="${img}" 
+             onload="this.style.opacity=1; this.previousElementSibling.style.display='none'" 
+             onerror="this.src='https://via.placeholder.com/300?text=No+Image'; this.style.opacity=1; this.previousElementSibling.style.display='none'">
+      </div>
+
       <div class="card-content">
+        
+        <!-- اسم المنتج -->
         <div class="name">${item["اسم"]}</div>
 
-  <div class="price">
-    <span class="num">${item["السعر"]}</span>
-    جنيه
-    ${item["الوحدة"] || "الكيلو"}
-  </div>
+        <!-- السعر -->
+        <div class="price">
+          <span class="num">${item["السعر"]}</span>
+          جنيه
+          ${item["الوحدة"] || "الكيلو"}
+        </div>
 
+        <!-- زر الطلب -->
         <a href="https://wa.me/201211340121?text=${encodeURIComponent(
           "السلام عليكم، عايز أطلب " + item["اسم"] + " بسعر " + item["السعر"] + " جنيه " + (item["الوحدة"] || "الكيلو")
         )}" 
