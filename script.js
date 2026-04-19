@@ -36,7 +36,16 @@ function show(cat){
 
     html += `
     <div class="card">
-
+         // تاريخ اليوم
+    let today = new Date();
+    
+    let day = today.getDate();
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    
+    // عرض التاريخ
+    document.getElementById("dateBox").innerText =
+      "📅 آخر تحديث: " + day + " / " + month + " / " + year; 
       <!-- صورة + لودينج -->
       <div class="img-box">
         <div class="img-loader"></div>
