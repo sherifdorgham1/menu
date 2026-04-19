@@ -2,6 +2,7 @@ const sheetURL = "https://opensheet.elk.sh/1k6NxRHJYTSZtmAqkB-P6Qrpylnh5crkaIGkq
 
 let data = [];
 
+// تحميل البيانات
 fetch(sheetURL)
 .then(res => res.json())
 .then(res => {
@@ -9,17 +10,40 @@ fetch(sheetURL)
   show("طيور");
 });
 
-// ✅ التاريخ (برا خالص)
-let today = new Date();
 
-let day = today.getDate();
-let month = today.getMonth() + 1;
-let year = today.getFullYear();
+// ✅ التاريخ + الساعة (لايف)
+function updateDateTime() {
 
-document.getElementById("dateBox").innerText =
-  "📅 آخر تحديث: " + day + " / " + month + " / " + year;
+  let now = new Date();
+
+  let days = ["الأحد","الإثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
+  let dayName = days[now.getDay()];
+
+  let day = now.getDate();
+  let month = now.getMonth() + 1;
+  let year = now.getFullYear();
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+
+  let period = hours >= 12 ? "مساءً" : "صباحًا";
+
+  hours = hours % 12;
+  if (hours === 0) hours = 12;
+
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+
+  document.getElementById("dateBox").innerText =
+    "📅 " + dayName + " " + day + " / " + month + " / " + year +
+    " - 🕒 " + hours + ":" + minutes + " " + period;
+}
+
+// تشغيلها كل ثانية
+setInterval(updateDateTime, 1000);
+updateDateTime();
 
 
+// عرض المنتجات
 function show(cat){
 
   document.querySelectorAll(".tabs button").forEach(btn => {
@@ -45,6 +69,7 @@ function show(cat){
     html += `
     <div class="card">
 
+      <!-- صورة + لودينج -->
       <div class="img-box">
         <div class="img-loader"></div>
         <img src="${img}" 
