@@ -27,9 +27,7 @@ function show(cat){
 
   data.filter(x => x["القسم"] == cat).forEach(item => {
 
-    let img = item["الصورة"] ? 
-    `https://images.weserv.nl/?url=${item["الصورة"]}` :
-    "https://via.placeholder.com/300";
+let img = item["الصورة"] ? item["الصورة"] : "https://via.placeholder.com/300?text=No+Image";
 
     html += `
     <div class="card">
