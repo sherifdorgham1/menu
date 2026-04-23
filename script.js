@@ -1,3 +1,4 @@
+let siteStatus = "on";
 const sheetURL = "https://opensheet.elk.sh/1k6NxRHJYTSZtmAqkB-P6Qrpylnh5crkaIGkqGjtCoTA/1";
 
 let data = [];
@@ -45,7 +46,15 @@ updateDateTime();
 
 // عرض المنتجات
 function show(cat){
-
+  if(siteStatus === "off"){
+  document.getElementById("content").innerHTML = `
+    <div style="text-align:center; padding:40px;">
+      <h2>🚧 المنيو تحت التحديث</h2>
+      <p>راجعنا بعد شوية ❤️</p>
+    </div>
+  `;
+  return;
+}
   document.querySelectorAll(".tabs button").forEach(btn => {
     btn.classList.remove("active");
   });
