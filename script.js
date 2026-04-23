@@ -1,4 +1,11 @@
 let siteStatus = "on";
+
+fetch("https://opensheet.elk.sh/1k6NxRHJYTSZtmAqkB-P6Qrpylnh5crkaIGkqGjtCoTA/settings")
+.then(res => res.json())
+.then(res => {
+  siteStatus = res[0].status;
+});
+
 const sheetURL = "https://opensheet.elk.sh/1k6NxRHJYTSZtmAqkB-P6Qrpylnh5crkaIGkqGjtCoTA/1";
 
 let data = [];
