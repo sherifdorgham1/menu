@@ -56,8 +56,8 @@ function show(cat){
   if(siteStatus === "off"){
   document.getElementById("content").innerHTML = `
     <div style="text-align:center; padding:40px;">
-      <h2>🚧 المنيو تحت التحديث</h2>
-      <p>راجعنا بعد شوية ❤️</p>
+      <h2>🐑✨ عيد أضحى مبارك ✨🐑</h2>
+      <p>دواجن ومشويات درغام تتمنى لكم عيدًا سعيدًا ❤️</p>
     </div>
   `;
   return;
