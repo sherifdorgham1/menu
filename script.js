@@ -55,15 +55,28 @@ updateDateTime();
 function show(cat){
   if(siteStatus === "off"){
   document.getElementById("content").innerHTML = `
-    <div style="text-align:center; padding:40px;">
-<h2 style="font-size:38px;font-weight:bold;line-height:1.8;color:white;">
+<div style="text-align:center; padding:40px; width:100%;">
+
+<h2 style="
+font-size:28px;
+font-weight:900;
+line-height:1.6;
+color:white;
+margin-bottom:20px;
+">
 🐑✨ عيد أضحى مبارك ✨🐑
 </h2>
 
-<p style="font-size:24px;font-weight:bold;line-height:1.8;color:white;">
+<p style="
+font-size:20px;
+font-weight:bold;
+line-height:1.8;
+color:white;
+">
 دواجن ومشويات درغام تتمنى لكم عيدًا سعيدًا ❤️
 </p>
-    </div>
+
+</div>
   `;
   return;
 }
