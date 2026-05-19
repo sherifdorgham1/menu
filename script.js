@@ -56,8 +56,13 @@ function show(cat){
   if(siteStatus === "off"){
   document.getElementById("content").innerHTML = `
     <div style="text-align:center; padding:40px;">
-      <h2>🐑✨ عيد أضحى مبارك ✨🐑</h2>
-      <p>دواجن ومشويات درغام تتمنى لكم عيدًا سعيدًا ❤️</p>
+<h2 style="font-size:38px;font-weight:bold;line-height:1.8;color:white;">
+🐑✨ عيد أضحى مبارك ✨🐑
+</h2>
+
+<p style="font-size:24px;font-weight:bold;line-height:1.8;color:white;">
+دواجن ومشويات درغام تتمنى لكم عيدًا سعيدًا ❤️
+</p>
     </div>
   `;
   return;
