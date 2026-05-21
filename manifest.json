@@ -1,13 +1,21 @@
 {
-  "background_color": "#000000",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "دواجن ومشويات درغام",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "درغام",
-  "start_url": "/",
-  "theme_color": "#ff9800",
-  "id": "dorgham-menu",
-  "description": "منيو دواجن ومشويات درغام - أحدث الأسعار والعروض اليومية"
+  "start_url": "/menu/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff9900",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "android/android-launchericon-192-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android/android-launchericon-512-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
