@@ -1,0 +1,13 @@
+{
+  "background_color": "#000000",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "دواجن ومشويات درغام",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "درغام",
+  "start_url": "/",
+  "theme_color": "#ff9800",
+  "id": "dorgham-menu",
+  "description": "منيو دواجن ومشويات درغام - أحدث الأسعار والعروض اليومية"
+}
