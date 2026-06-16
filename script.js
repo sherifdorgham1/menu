@@ -68,14 +68,7 @@ function show(cat){
 يرجى المحاولة بعد قليل ❤️
   </h2>
   
-  <p style="
-  font-size:20px;
-  font-weight:bold;
-  line-height:1.8;
-  color:white;
-  ">
- 
-  </p>
+
   
   </div>
   `;
