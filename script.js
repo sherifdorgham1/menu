@@ -64,7 +64,8 @@ function show(cat){
   color:white;
   margin-bottom:20px;
   ">
-  🐑✨ عيد أضحى مبارك ✨🐑
+  🔧 جاري تحديث الأسعار والمنتجات
+يرجى المحاولة بعد قليل ❤️
   </h2>
   
   <p style="
