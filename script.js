@@ -69,7 +69,7 @@ function show(cat){
   </h2>
   
 
-  
+
   </div>
   `;
   return;
