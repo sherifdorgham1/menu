@@ -74,7 +74,7 @@ function show(cat){
   line-height:1.8;
   color:white;
   ">
-  دواجن ومشويات درغام تتمنى لكم عيدًا سعيدًا ❤️
+ 
   </p>
   
   </div>
